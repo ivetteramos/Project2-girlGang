@@ -1,1 +1,1 @@
-# Project2-girlGang
+# Project2GirlGang
