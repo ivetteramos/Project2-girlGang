@@ -14,8 +14,8 @@ router.get('/', withAuth, async (req, res) => {
 
     res.render('homepage', {
       users,
-      // Eventually, your application will qery into the recipe API and get some form of response
-      // This will probably be an arrya of objects where each object is a recipe
+      // Eventually, your application will query into the recipe API and get some form of response
+      // This will probably be an array of objects where each object is a recipe
       // you'll pass that array here in this object
       recipes: [
         {
