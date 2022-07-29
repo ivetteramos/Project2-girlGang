@@ -14,7 +14,19 @@ router.get('/', withAuth, async (req, res) => {
 
     res.render('homepage', {
       users,
-  
+      // Eventually, your application will qery into the recipe API and get some form of response
+      // This will probably be an arrya of objects where each object is a recipe
+      // you'll pass that array here in this object
+      recipes: [
+        {
+          id: 1,
+          name: "Chicken Alfredo",
+          ingredients: [
+            "Chicken",
+            "Alfredo"
+          ]
+        }
+      ],
       logged_in: req.session.logged_in,
     });
   } catch (err) {
