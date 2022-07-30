@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/models');
+const sequelize = require('../config/connection');
 
 class favoriteRecipe extends Model{}
 
@@ -31,4 +31,4 @@ favoriteRecipe.init(
     }
 )
 
-module.export = favoriteRecipe;
+module.exports = favoriteRecipe;
