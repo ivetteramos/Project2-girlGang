@@ -25,7 +25,23 @@ router.get('/', withAuth, async (req, res) => {
             "Chicken",
             "Alfredo"
           ]
-        }
+        },
+        {
+          id: 1,
+          name: "Chicken Alfredo",
+          ingredients: [
+            "Chicken",
+            "Alfredo"
+          ]
+        },
+        {
+          id: 1,
+          name: "Chicken Alfredo",
+          ingredients: [
+            "Chicken",
+            "Alfredo"
+          ]
+        },
       ],
       logged_in: req.session.logged_in,
     });
