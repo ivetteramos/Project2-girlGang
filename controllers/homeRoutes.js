@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, FavoriteRecipe } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -8,6 +8,7 @@ router.get('/', withAuth, async (req, res) => {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
       order: [['name', 'ASC']],
+      include: {model: FavoriteRecipe}
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
@@ -32,7 +33,7 @@ router.get('/', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
+})
 router.get('/', (req, res) =>{
   res.render('homepage');
 
