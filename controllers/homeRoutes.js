@@ -67,7 +67,7 @@ router.get('/', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 
-})
+)
 router.get('/', (req, res) =>{
   res.render('homepage');
 });
