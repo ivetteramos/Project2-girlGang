@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class FavoriteRecipe extends Model{}
+class favoriteRecipe extends Model{}
 
-FavoriteRecipe.init(
+favoriteRecipe.init(
     {
     id: {
         type: DataTypes.INTEGER,
@@ -30,5 +30,5 @@ FavoriteRecipe.init(
         modelName: 'favoriteRecipe',
     }
 )
-module.exports = FavoriteRecipe;
 
+module.exports = favoriteRecipe;
