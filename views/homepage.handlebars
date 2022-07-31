@@ -22,20 +22,19 @@
     <div class="row gx-4 gx-lg-5">
         {{!-- Need to change Users to Recipe (coming from seeds/userData.json) --}}
         {{#each recipes as |recipe|}}
-        <a href="/recipe/{{recipe.id}}">
             <div class="col-md-4 mb-5">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h2 class="card-title">{{recipe.name}}</h2>
-                        {{#each recipe.ingredients as |ingredient|}}
-                        <p class="card-text">{{ingredient}}</p>
-                        {{/each}}
+                        <h2 class="card-title">{{recipe.title}}</h2>
+                        
+                        <p class="card-text">{{{recipe.summary}}}</p>
+                        
                     </div>
 
-                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Click for Recipe</a></div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="/recipe/{{recipe.id}}">Click for Recipe</a></div>
                 </div>
             </div>
-        </a>
+       
         {{/each}}
     </div>
     
