@@ -1,41 +1,44 @@
-  
 <div class="container px-4 px-lg-5">
-            <!-- Heading Row-->
-            <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                <div class="col-lg-7"><img class= "w-100 p-3 center" src="/images/logo.png" alt="cooking logo">
-                    <h1 class="font-weight-light">Cooking at Home</h1>
-                    <p>Picture of Recipe</p>
-                    {{!-- <a class="btn btn-primary" href="#!">Call to Action!</a> --}}
-                </div>
-            </div>
-            <!-- Call to Action-->
-            <form id="recipe-search">
-                <input id="search-value">
-                <input type="submit" value="search">
-            </form>
-            <div class="card text-white bg-secondary my-5 py-4 text-center">
-                <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
-            </div>
-            <!-- Content Row-->
-            <div class="row gx-4 gx-lg-5">
-            {{!-- Need to change Users to Recipe (coming from seeds/userData.json) --}}
-                {{#each recipes as |recipe|}}
-                <a href="/recipe/{{recipe.id}}">
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title">{{recipe.name}}</h2>
-                            {{#each recipe.ingredients as |ingredient|}}
-                            <p class="card-text">{{ingredient}}</p>
-                            {{/each}}
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Recipe Card</a></div>
-                    </div>
-                </div>
-                </a>
-                {{/each}}
-            </div>
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="w-100 p-3 center" src="/images/Creamlogo.png" alt="cooking logo">
+
+            {{!-- <a class="btn btn-primary" href="#!">Call to Action!</a> --}}
         </div>
+    </div>
+    <div class="card bg-secondary my-5 py-4 text-center">
+        <div class="card-body">
+            <p class="text-black m-0">Search for delicious meal to cook at home below!</p>
+        </div>
+    </div>
+    {{!-- Search Bar for Recipe --}}
 
-        <script src="/js/search.js"></script>
+    <form id="recipe-search">
+        <input id="search-value">
+        <input type="submit" value="search">
+    </form>
 
+    <!-- Content Row-->
+    <div class="row gx-4 gx-lg-5">
+        {{!-- Need to change Users to Recipe (coming from seeds/userData.json) --}}
+        {{#each recipes as |recipe|}}
+        <a href="/recipe/{{recipe.id}}">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">{{recipe.name}}</h2>
+                        {{#each recipe.ingredients as |ingredient|}}
+                        <p class="card-text">{{ingredient}}</p>
+                        {{/each}}
+                    </div>
+
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Click for Recipe</a></div>
+                </div>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+    
+</div>
+
+<script src="/js/search.js"></script>

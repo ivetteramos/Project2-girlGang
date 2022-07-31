@@ -30,5 +30,5 @@ FavoriteRecipe.init(
         modelName: 'favoriteRecipe',
     }
 )
-
 module.exports = FavoriteRecipe;
+

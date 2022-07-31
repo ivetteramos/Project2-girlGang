@@ -10,4 +10,3 @@ FavoriteRecipe.belongsTo(User,{
 
 module.exports = { User, FavoriteRecipe};
 
-
