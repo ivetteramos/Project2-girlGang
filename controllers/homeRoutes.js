@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, FavoriteRecipe } = require('../models');
 const withAuth = require('../utils/auth');
       // Eventually, your application will query into the recipe API and get some form of response
       // This will probably be an array of objects where each object is a recipe
