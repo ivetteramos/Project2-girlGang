@@ -1,22 +1,4 @@
 <nav class="navbar navbar-light" style="background-color: #647295">
-<<<<<<< HEAD
-    
-            <div class="container px-5">
-                {{!-- <a class="navbar-brand" href="/">Cooking at Home</a> --}}
-                <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <h1 class="font-weight-light text-left">Cooking at Home</h1>
-                        <button class="nav-item" id="nav-btn">Login<button class="nav-link active" id="nav-btn" aria-current="page" href="#!">Home</button></button>
-                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
-                    {{#if logged_in}}
-                <button class="nav-item" id="logout">logout</button>
-                {{/if}} 
-                    </ul>
-                </div>
-            </div>
-        </nav>  
-=======
 
     <div class="container px-5">
         {{!-- <a class="navbar-brand" href="/">Cooking at Home</a> --}}
@@ -26,15 +8,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <h1 class="font-weight-light text-left">Cooking at Home</h1>
-                <button class="nav-item" id="nav-btn">Login<button class="nav-link active" id="nav-btn"
-                        aria-current="page" href="#!">Home</button> 
-                {{!-- <li class="nav-item"><a class="nav-link" href="/login">Login</a></li> --}}
-                {{#if logged_in}}
-                <button class="nav-item" id="logout">logout</button>
-                {{/if}}
-                
+                    <ul style="list-style: none;">
+                        <li class="nav-item">
+                            <a class= "nav-link nav-btn" href="/">Home</a>
+                        </li> 
+                    {{#if logged_in}}
+                        <li class="nav-item">
+                            <a class= "nav-link nav-btn" href="/favorite">Favorite Recipes</a>
+                        </li> 
+                        <li class="nav-item" id="logout">
+                            <a class= "nav-link nav-btn">Logout</a>
+                        </li> 
+                    {{else}}
+                        <li class="nav-item">
+                            <a class= "nav-link nav-btn"  href="/login">Login</a>
+                        </li>  
+                    {{/if}}
                 </ul>
             </div>
         </div>
 </nav>
->>>>>>> 818e76d09240cfbf127efa08b465143c483373ed
