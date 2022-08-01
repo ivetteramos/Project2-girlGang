@@ -68,6 +68,7 @@ router.get('/', withAuth, async (req, res) => {
   }
 
 )
+
 router.get('/', (req, res) =>{
   res.render('homepage');
 });
