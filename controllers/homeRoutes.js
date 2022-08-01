@@ -21,7 +21,6 @@ const withAuth = require('../utils/auth');
         axios.request(options).then(function (response) {
             console.log(response.data);
             res.render('homepage', {
-
               recipes: response.data.recipes,
                 
               logged_in: req.session.logged_in,
@@ -44,6 +43,47 @@ router.get('/favorites', withAuth, async (req,res) => {
   } catch (err) {
     res.status(500).json(err)
   }
+    //res.render('homepage', {
+      //users,
+      // Eventually, your application will query into the recipe API and get some form of response
+      // This will probably be an array of objects where each object is a recipe
+      // you'll pass that array here in this object
+      //recipes: [
+        //{
+          //id: 1,
+          //name: "Chicken Alfredo",
+          //ingredients: [
+            //"Chicken",
+            //"Alfredo"
+          //]
+        //},
+        //{
+          //id: 1,
+          //name: "Chicken Alfredo",
+          //ingredients: [
+            //"Chicken",
+            //"Alfredo"
+          //]
+        //},
+        //{
+          //id: 1,
+          //name: "Chicken Alfredo",
+          //ingredients: [
+            //"Chicken",
+            //"Alfredo"
+          //]
+        //},
+      //],
+      //logged_in: req.session.logged_in,
+    //});
+  
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+
+})
+router.get('/', (req, res) =>{
+  res.render('homepage');
 });
 
 //Login 
