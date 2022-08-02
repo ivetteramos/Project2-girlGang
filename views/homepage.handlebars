@@ -1,7 +1,8 @@
 <div class="container px-4 px-lg-5">
     <!-- Heading Row-->
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
-        <div class="col-lg-8"><img class="w-100 p-3 center" src="/images/Creamlogo.png" alt="cooking logo">
+        <div class="col-lg-8"><img class="w-50
+        p-3 center" src="/images/bolder-logo.PNG" alt="cooking logo">
 
             {{!-- <a class="btn btn-primary" href="#!">Call to Action!</a> --}}
         </div>
@@ -18,7 +19,7 @@
         <input type="submit" value="search">
     </form>
 
-    <!-- Content Row-->
+    {{!-- <!-- Content Row-->
     <div class="column">
         {{!-- Need to change Users to Recipe (coming from seeds/userData.json) --}}
         {{#each recipes as |recipe|}}
@@ -36,8 +37,17 @@
             </div>
         </div>
         {{/each}}
-    </div>
+    </div> --}}
 
+{{!-- <div class="card" style="width: 18rem;">
+    <img class="card-img-top rounded float-left" src="{{recipe.image}}" alt="{{recipe.title}}">
+    <div class="card-body">
+    <h5 class="card-title">{{recipe.title}}</h5>
+    <p class="card-text">{{recipe.readyInMinutes}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+</div> --}}
+
+{{!-- </div>
     <div class="column">
         {{!-- Need to change Users to Recipe (coming from seeds/userData.json) --}}
         {{#each recipes as |recipe|}}
@@ -55,9 +65,9 @@
             </div>
         </div>
         {{/each}}
-    </div>
+    </div> --}}
 
-    <div class="column">
+    {{!-- <div class="column">
         {{!-- Need to change Users to Recipe (coming from seeds/userData.json) --}}
         {{#each recipes as |recipe|}}
         <div class="col-md-6 mb-5">
@@ -74,6 +84,6 @@
         </div>
         {{/each}}
     </div>
-</div>
+</div> --}}
 
 <script src="/js/search.js"></script>
