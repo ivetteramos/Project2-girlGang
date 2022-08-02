@@ -5,6 +5,7 @@ const withAuth = require('../utils/auth');
       // This will probably be an array of objects where each object is a recipe
       // you'll pass that array here in this object
 
+<<<<<<< Updated upstream
       const axios = require("axios");
 
       router.get('/',(req, res) => {
@@ -49,6 +50,15 @@ router.get('/', (req, res) =>{
 
 //Signup - new user
 router.get('/signup', (req, res) => {
+=======
+//withAuth
+router.get('/', (req, res) => {
+  res.render("homepage");
+});
+
+router.get('/login', (req, res) => {
+
+>>>>>>> Stashed changes
   if (req.session.logged_in) {
     res.redirect('/');
     return;

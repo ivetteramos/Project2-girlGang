@@ -7,6 +7,7 @@
 // verify they logged in with Auth
 // Then render results page
 
+<<<<<<< Updated upstream
 // router.get('/results', withAuth, async (req, res) => {
 //     try {
 //     const userData = await User.findAll({
@@ -28,3 +29,10 @@
 
 //}
 //});
+=======
+// router.get("/results", withAuth, async (req,res) => {
+    //try {
+    
+    //}
+//});
+>>>>>>> Stashed changes
