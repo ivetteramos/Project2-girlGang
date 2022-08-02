@@ -1,42 +1,79 @@
 <div class="container px-4 px-lg-5">
     <!-- Heading Row-->
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
-        <div class="col-lg-7"><img class="w-100 p-3 center" src="/images/Creamlogo.png" alt="cooking logo">
+        <div class="col-lg-8"><img class="w-100 p-3 center" src="/images/Creamlogo.png" alt="cooking logo">
 
             {{!-- <a class="btn btn-primary" href="#!">Call to Action!</a> --}}
         </div>
     </div>
     <div class="card bg-secondary my-5 py-4 text-center">
         <div class="card-body">
-            <p class="text-black m-0">Search for delicious meal to cook at home below!</p>
+            <p class="text-black m-0 searchBold">Search for delicious meals to cook at home below!</p>
         </div>
     </div>
     {{!-- Search Bar for Recipe --}}
 
     <form id="recipe-search">
-        <input id="search-value">
+        <input id="search-value" placeholder="Search">
         <input type="submit" value="search">
     </form>
 
     <!-- Content Row-->
-    <div class="row gx-4 gx-lg-5">
+    <div class="column">
         {{!-- Need to change Users to Recipe (coming from seeds/userData.json) --}}
         {{#each recipes as |recipe|}}
-            <div class="col-md-4 mb-5">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h2 class="card-title">{{recipe.title}}</h2>
-                        
-                        <p class="card-text">{{{recipe.summary}}}</p>
-                        
-                    </div>
+        <div class="col-md-6 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">{{recipe.title}}</h2>
+                    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    <p class="card-text">{{{recipe.summary}}}</p>
 
-                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="/recipe/{{recipe.id}}">Click for Recipe</a></div>
                 </div>
+
+                <div id="recipe-random" class="card-footer"><a class="btn btn-primary btn-sm" href="/recipe/{{recipe.id}}">Click for
+                        Recipe</a></div>
             </div>
+        </div>
         {{/each}}
     </div>
-    
+
+    <div class="column">
+        {{!-- Need to change Users to Recipe (coming from seeds/userData.json) --}}
+        {{#each recipes as |recipe|}}
+        <div class="col-md-6 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">{{recipe.title}}</h2>
+                    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    <p class="card-text">{{{recipe.summary}}}</p>
+
+                </div>
+
+                <div class="card-footer"><a class="btn btn-primary btn-sm" href="/recipe/{{recipe.id}}">Click for
+                        Recipe</a></div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="column">
+        {{!-- Need to change Users to Recipe (coming from seeds/userData.json) --}}
+        {{#each recipes as |recipe|}}
+        <div class="col-md-6 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">{{recipe.title}}</h2>
+                    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    <p class="card-text">{{{recipe.summary}}}</p>
+                </div>
+
+                <div class="card-footer"><a class="btn btn-primary btn-sm" href="/recipe/{{recipe.id}}">Click for
+                        Recipe</a></div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
 
 <script src="/js/search.js"></script>

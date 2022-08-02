@@ -21,9 +21,7 @@ const withAuth = require('../utils/auth');
         axios.request(options).then(function (response) {
             console.log(response.data);
             res.render('homepage', {
-
               recipes: response.data.recipes,
-                
               logged_in: req.session.logged_in,
             });
         }).catch(function (error) {
@@ -68,4 +66,4 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-module.exports = router;
+module.exports = router
