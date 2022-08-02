@@ -22,7 +22,6 @@ const withAuth = require('../utils/auth');
             console.log(response.data);
             res.render('homepage', {
               recipes: response.data.recipes,
-                
               logged_in: req.session.logged_in,
             });
         }).catch(function (error) {
@@ -33,6 +32,32 @@ const withAuth = require('../utils/auth');
         
       })
 
+//Favorite Recipes 
+router.get('/favorites', withAuth, async (req,res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude : ['password']},
+      include: {model: FavoriteRecipe }
+    })
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+router.get('/', (req, res) =>{
+  res.render('homepage');
+});
+
+//Signup - new user
+router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+  res.render('signup');
+});
+
+
+//Login 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
